@@ -1,0 +1,10 @@
+D:\QLBanHang-Huy\WindowsForms\bin\Debug\WindowsForms.exe.config
+D:\QLBanHang-Huy\WindowsForms\bin\Debug\WindowsForms.exe
+D:\QLBanHang-Huy\WindowsForms\bin\Debug\WindowsForms.pdb
+D:\QLBanHang-Huy\WindowsForms\obj\Debug\WindowsForms.csprojAssemblyReference.cache
+D:\QLBanHang-Huy\WindowsForms\obj\Debug\WindowsForms.Properties.Resources.resources
+D:\QLBanHang-Huy\WindowsForms\obj\Debug\WindowsForms.csproj.GenerateResource.cache
+D:\QLBanHang-Huy\WindowsForms\obj\Debug\WindowsForms.csproj.CoreCompileInputs.cache
+D:\QLBanHang-Huy\WindowsForms\obj\Debug\WindowsForms.exe
+D:\QLBanHang-Huy\WindowsForms\obj\Debug\WindowsForms.pdb
+D:\QLBanHang-Huy\WindowsForms\obj\Debug\WindowsForms.Form1.resources

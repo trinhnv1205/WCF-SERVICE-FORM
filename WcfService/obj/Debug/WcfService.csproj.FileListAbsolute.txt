@@ -1,0 +1,7 @@
+D:\QLBanHang-Huy\WcfService\obj\Debug\WcfService.csprojAssemblyReference.cache
+D:\QLBanHang-Huy\WcfService\obj\Debug\WcfService.csproj.CoreCompileInputs.cache
+D:\QLBanHang-Huy\WcfService\bin\Debug\WcfService.dll
+D:\QLBanHang-Huy\WcfService\bin\Debug\WcfService.pdb
+D:\QLBanHang-Huy\WcfService\obj\Debug\WcfService.dll
+D:\QLBanHang-Huy\WcfService\obj\Debug\WcfService.pdb
+D:\QLBanHang-Huy\WcfService\bin\Debug\WcfService.dll.config
