@@ -1,6 +1,6 @@
 ﻿namespace WindowsForms
 {
-    partial class Form1
+    partial class DangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(331, 84);
+            this.label1.Location = new System.Drawing.Point(274, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 29);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 159);
+            this.label2.Location = new System.Drawing.Point(123, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 1;
@@ -59,7 +59,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(180, 226);
+            this.label3.Location = new System.Drawing.Point(123, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 2;
@@ -67,21 +67,21 @@
             // 
             // txtTk
             // 
-            this.txtTk.Location = new System.Drawing.Point(324, 159);
+            this.txtTk.Location = new System.Drawing.Point(267, 125);
             this.txtTk.Name = "txtTk";
             this.txtTk.Size = new System.Drawing.Size(230, 22);
             this.txtTk.TabIndex = 3;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(324, 226);
+            this.txtPass.Location = new System.Drawing.Point(267, 192);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(230, 22);
             this.txtPass.TabIndex = 4;
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(475, 271);
+            this.btnDangNhap.Location = new System.Drawing.Point(358, 255);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(139, 34);
             this.btnDangNhap.TabIndex = 5;
@@ -89,19 +89,20 @@
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // Form1
+            // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(607, 351);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtTk);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "DangNhap";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.DangNhap_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

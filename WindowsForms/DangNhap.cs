@@ -6,9 +6,9 @@ using WindowsForms.ServiceReference1;
 
 namespace WindowsForms
 {
-    public partial class Form1 : Form
+    public partial class DangNhap : Form
     {
-        public Form1()
+        public DangNhap()
         {
             InitializeComponent();
         }
@@ -49,6 +49,11 @@ namespace WindowsForms
                     txtTk.Focus();
                 }
             }
+        }
+
+        private void DangNhap_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
