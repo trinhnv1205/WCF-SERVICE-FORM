@@ -1,0 +1,6 @@
+D:\WCF_MonThayThe\WCF_SinhVien\SVService\obj\Debug\SVService.csproj.CoreCompileInputs.cache
+D:\WCF_MonThayThe\WCF_SinhVien\SVService\bin\Debug\SVService.dll.config
+D:\WCF_MonThayThe\WCF_SinhVien\SVService\bin\Debug\SVService.dll
+D:\WCF_MonThayThe\WCF_SinhVien\SVService\bin\Debug\SVService.pdb
+D:\WCF_MonThayThe\WCF_SinhVien\SVService\obj\Debug\SVService.dll
+D:\WCF_MonThayThe\WCF_SinhVien\SVService\obj\Debug\SVService.pdb

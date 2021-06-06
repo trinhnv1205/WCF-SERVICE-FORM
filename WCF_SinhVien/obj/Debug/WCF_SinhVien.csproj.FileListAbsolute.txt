@@ -1,0 +1,9 @@
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\bin\Debug\WCF_SinhVien.exe.config
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\bin\Debug\WCF_SinhVien.exe
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\bin\Debug\WCF_SinhVien.pdb
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\obj\Debug\WCF_SinhVien.Form1.resources
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\obj\Debug\WCF_SinhVien.Properties.Resources.resources
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\obj\Debug\WCF_SinhVien.csproj.GenerateResource.cache
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\obj\Debug\WCF_SinhVien.csproj.CoreCompileInputs.cache
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\obj\Debug\WCF_SinhVien.exe
+D:\WCF_MonThayThe\WCF_SinhVien\WCF_SinhVien\obj\Debug\WCF_SinhVien.pdb

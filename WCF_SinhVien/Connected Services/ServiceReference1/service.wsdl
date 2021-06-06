@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service_SinhVien" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/SVService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_SinhVien_Insert_SV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert_SV" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Insert_SV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insert_SVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Update_SV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_SV" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Update_SV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_SVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Xoa_SV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Xoa_SV" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Xoa_SV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Xoa_SVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Check_Dup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Check_Dup" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Check_Dup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Check_DupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Search_SV_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search_SV" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_Search_SV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Search_SVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_GetListCombobox_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListCombobox" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_GetListCombobox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListComboboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="IService_SinhVien_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService_SinhVien">
+    <wsdl:operation name="Insert_SV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService_SinhVien/Insert_SV" message="tns:IService_SinhVien_Insert_SV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService_SinhVien/Insert_SVResponse" message="tns:IService_SinhVien_Insert_SV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_SV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService_SinhVien/Update_SV" message="tns:IService_SinhVien_Update_SV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService_SinhVien/Update_SVResponse" message="tns:IService_SinhVien_Update_SV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Xoa_SV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService_SinhVien/Xoa_SV" message="tns:IService_SinhVien_Xoa_SV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService_SinhVien/Xoa_SVResponse" message="tns:IService_SinhVien_Xoa_SV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Check_Dup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService_SinhVien/Check_Dup" message="tns:IService_SinhVien_Check_Dup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService_SinhVien/Check_DupResponse" message="tns:IService_SinhVien_Check_Dup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_SV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService_SinhVien/Search_SV" message="tns:IService_SinhVien_Search_SV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService_SinhVien/Search_SVResponse" message="tns:IService_SinhVien_Search_SV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListCombobox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService_SinhVien/GetListCombobox" message="tns:IService_SinhVien_GetListCombobox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService_SinhVien/GetListComboboxResponse" message="tns:IService_SinhVien_GetListCombobox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService_SinhVien/GetList" message="tns:IService_SinhVien_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService_SinhVien/GetListResponse" message="tns:IService_SinhVien_GetList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService_SinhVien" type="tns:IService_SinhVien">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert_SV">
+      <soap:operation soapAction="http://tempuri.org/IService_SinhVien/Insert_SV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_SV">
+      <soap:operation soapAction="http://tempuri.org/IService_SinhVien/Update_SV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Xoa_SV">
+      <soap:operation soapAction="http://tempuri.org/IService_SinhVien/Xoa_SV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Check_Dup">
+      <soap:operation soapAction="http://tempuri.org/IService_SinhVien/Check_Dup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_SV">
+      <soap:operation soapAction="http://tempuri.org/IService_SinhVien/Search_SV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCombobox">
+      <soap:operation soapAction="http://tempuri.org/IService_SinhVien/GetListCombobox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="http://tempuri.org/IService_SinhVien/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service_SinhVien">
+    <wsdl:port name="BasicHttpBinding_IService_SinhVien" binding="tns:BasicHttpBinding_IService_SinhVien">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/SVService/Service_SinhVien/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
