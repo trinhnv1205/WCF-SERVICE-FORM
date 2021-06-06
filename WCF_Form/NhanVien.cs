@@ -23,7 +23,7 @@ namespace WCF_Form
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
-            _service.DoWork();
+            
         }
     }
 }
