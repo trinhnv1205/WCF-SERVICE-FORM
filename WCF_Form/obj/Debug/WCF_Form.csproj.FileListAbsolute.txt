@@ -1,0 +1,14 @@
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\bin\Debug\WCF_Form.exe.config
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\bin\Debug\WCF_Form.exe
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\bin\Debug\WCF_Form.pdb
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\bin\Debug\WCF_Service.dll
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\bin\Debug\WCF_Service.pdb
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\bin\Debug\WCF_Service.dll.config
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\obj\Debug\WCF_Form.csprojAssemblyReference.cache
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\obj\Debug\WCF_Form.NhanVien.resources
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\obj\Debug\WCF_Form.Properties.Resources.resources
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\obj\Debug\WCF_Form.csproj.GenerateResource.cache
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\obj\Debug\WCF_Form.csproj.CoreCompileInputs.cache
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\obj\Debug\WCF_Form.csproj.CopyComplete
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\obj\Debug\WCF_Form.exe
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Form\obj\Debug\WCF_Form.pdb
