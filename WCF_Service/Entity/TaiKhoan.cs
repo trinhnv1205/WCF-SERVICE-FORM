@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 namespace WCF_Service.Entity
 {
     [TableNameAttr("TAIKHOAN")]
-    [DataContract]
+    
     public class TaiKhoan : EntityBase
     {
         [IsTableKeyAttr(false)]
-        [DataMember]
+        
         public string TenTK { get; set; }
-        [DataMember]
+        
         public string MK { get; set; }
-        [DataMember]
+        
         public string CV { get; set; }
-        [DataMember]
+        
         public string Fullname { get; set; }
     }
 }

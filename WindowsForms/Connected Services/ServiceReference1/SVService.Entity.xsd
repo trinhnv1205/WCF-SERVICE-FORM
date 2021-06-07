@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SVService.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SVService.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/SVService.App_Data" />
+  <xs:complexType name="NhanVien">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SVService.App_Data" base="q1:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Chucvu" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Diachi" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hoten" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Luong" type="xs:int" />
+          <xs:element minOccurs="0" name="Luongcb" type="xs:int" />
+          <xs:element minOccurs="0" name="MaNV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ngaysinh" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phucap" type="xs:int" />
+          <xs:element minOccurs="0" name="Sdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="thuong" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NhanVien" nillable="true" type="tns:NhanVien" />
+  <xs:complexType name="ArrayOfNhanVien">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NhanVien" nillable="true" type="tns:NhanVien" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNhanVien" nillable="true" type="tns:ArrayOfNhanVien" />
+</xs:schema>

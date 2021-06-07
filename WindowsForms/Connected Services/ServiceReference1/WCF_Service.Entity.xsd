@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_Service.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_Service.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/SVService.App_Data" />
+  <xs:complexType name="BanHang">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SVService.App_Data" base="q1:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ghichu" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gia" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="MaHD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaKH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaNCC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaSP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ngayban" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Soluong" type="xs:int" />
+          <xs:element minOccurs="0" name="TenSP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Thanhtien" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BanHang" nillable="true" type="tns:BanHang" />
+  <xs:complexType name="ArrayOfBanHang">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BanHang" nillable="true" type="tns:BanHang" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBanHang" nillable="true" type="tns:ArrayOfBanHang" />
+  <xs:complexType name="KhachHang">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SVService.App_Data" base="q2:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Diachi" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaKH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TenKH" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="KhachHang" nillable="true" type="tns:KhachHang" />
+  <xs:complexType name="ArrayOfKhachHang">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KhachHang" nillable="true" type="tns:KhachHang" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKhachHang" nillable="true" type="tns:ArrayOfKhachHang" />
+  <xs:complexType name="NhaCungCap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/SVService.App_Data" base="q3:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Diachi" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaNCC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sdt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TenNCC" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NhaCungCap" nillable="true" type="tns:NhaCungCap" />
+  <xs:complexType name="ArrayOfNhaCungCap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NhaCungCap" nillable="true" type="tns:NhaCungCap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNhaCungCap" nillable="true" type="tns:ArrayOfNhaCungCap" />
+  <xs:complexType name="NhapSanPham">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/SVService.App_Data" base="q4:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ghichu" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gianhap" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="MaNCC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaPhieu" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaSP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ngaynhap" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Soluong" type="xs:int" />
+          <xs:element minOccurs="0" name="TenSP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Thanhtien" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NhapSanPham" nillable="true" type="tns:NhapSanPham" />
+  <xs:complexType name="ArrayOfNhapSanPham">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NhapSanPham" nillable="true" type="tns:NhapSanPham" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNhapSanPham" nillable="true" type="tns:ArrayOfNhapSanPham" />
+  <xs:complexType name="SanPham">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/SVService.App_Data" base="q5:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ghichu" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gia" type="xs:int" />
+          <xs:element minOccurs="0" name="MaNCC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaSP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Soluong" type="xs:int" />
+          <xs:element minOccurs="0" name="TenSP" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SanPham" nillable="true" type="tns:SanPham" />
+  <xs:complexType name="ArrayOfSanPham">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SanPham" nillable="true" type="tns:SanPham" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSanPham" nillable="true" type="tns:ArrayOfSanPham" />
+  <xs:complexType name="TaiKhoan">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/SVService.App_Data" base="q6:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TenTK" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TaiKhoan" nillable="true" type="tns:TaiKhoan" />
+  <xs:complexType name="ArrayOfTaiKhoan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaiKhoan" nillable="true" type="tns:TaiKhoan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaiKhoan" nillable="true" type="tns:ArrayOfTaiKhoan" />
+</xs:schema>

@@ -47,28 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BanHang.cs">
+    <Compile Include="BanHangF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BanHang.Designer.cs">
-      <DependentUpon>BanHang.cs</DependentUpon>
+    <Compile Include="BanHangF.Designer.cs">
+      <DependentUpon>BanHangF.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="DangNhap.cs">
+    <Compile Include="ConvertUtils.cs" />
+    <Compile Include="DangNhapF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DangNhap.Designer.cs">
-      <DependentUpon>DangNhap.cs</DependentUpon>
+    <Compile Include="DangNhapF.Designer.cs">
+      <DependentUpon>DangNhapF.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachHang.cs">
+    <Compile Include="KhachHangF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KhachHang.Designer.cs">
-      <DependentUpon>KhachHang.cs</DependentUpon>
+    <Compile Include="KhachHangF.Designer.cs">
+      <DependentUpon>KhachHangF.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -76,37 +77,52 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhaCC.cs">
+    <Compile Include="NhaCCF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhaCC.Designer.cs">
-      <DependentUpon>NhaCC.cs</DependentUpon>
+    <Compile Include="NhaCCF.Designer.cs">
+      <DependentUpon>NhaCCF.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien.cs">
+    <Compile Include="NhanVienF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <Compile Include="NhanVienF.Designer.cs">
+      <DependentUpon>NhanVienF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapSPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapSPF.Designer.cs">
+      <DependentUpon>NhapSPF.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BanHang.resx">
-      <DependentUpon>BanHang.cs</DependentUpon>
+    <Compile Include="SanPhamF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SanPhamF.Designer.cs">
+      <DependentUpon>SanPhamF.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BanHangF.resx">
+      <DependentUpon>BanHangF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DangNhap.resx">
-      <DependentUpon>DangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="DangNhapF.resx">
+      <DependentUpon>DangNhapF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachHang.resx">
-      <DependentUpon>KhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="KhachHangF.resx">
+      <DependentUpon>KhachHangF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhaCC.resx">
-      <DependentUpon>NhaCC.cs</DependentUpon>
+    <EmbeddedResource Include="NhaCCF.resx">
+      <DependentUpon>NhaCCF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien.resx">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="NhanVienF.resx">
+      <DependentUpon>NhanVienF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapSPF.resx">
+      <DependentUpon>NhapSPF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +133,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SanPhamF.resx">
+      <DependentUpon>SanPhamF.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Connected Services\ServiceReference1\service.wsdl" />
     <None Include="Connected Services\ServiceReference1\service.xsd">
       <SubType>Designer</SubType>
@@ -124,8 +143,35 @@
     <None Include="Connected Services\ServiceReference1\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\WcfService.xsd">
+    <None Include="Connected Services\ServiceReference1\SVService.App_Data.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\SVService.Entity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WCF_Service.Entity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WindowsForms.ServiceReference1.BanHang.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WindowsForms.ServiceReference1.KhachHang.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WindowsForms.ServiceReference1.NhaCungCap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WindowsForms.ServiceReference1.NhanVien.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WindowsForms.ServiceReference1.NhapSanPham.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WindowsForms.ServiceReference1.SanPham.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WindowsForms.ServiceReference1.TaiKhoan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -4,3 +4,4 @@ D:\4.Projects\WCF-SERVICE-FORM\WCF_Service\bin\Debug\WCF_Service.pdb
 D:\4.Projects\WCF-SERVICE-FORM\WCF_Service\obj\Debug\WCF_Service.csproj.CoreCompileInputs.cache
 D:\4.Projects\WCF-SERVICE-FORM\WCF_Service\obj\Debug\WCF_Service.dll
 D:\4.Projects\WCF-SERVICE-FORM\WCF_Service\obj\Debug\WCF_Service.pdb
+D:\4.Projects\WCF-SERVICE-FORM\WCF_Service\obj\Debug\WCF_Service.csprojAssemblyReference.cache

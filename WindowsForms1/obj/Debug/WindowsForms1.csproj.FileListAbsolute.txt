@@ -1,0 +1,17 @@
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\bin\Debug\WindowsForms1.exe.config
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\bin\Debug\WindowsForms1.exe
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\bin\Debug\WindowsForms1.pdb
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.csprojAssemblyReference.cache
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.BanHang.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.DangNhap.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.KhachHang.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.Main.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.NhaCC.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.NhanVien.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.NhapSP.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.Properties.Resources.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.SanPham.resources
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.csproj.GenerateResource.cache
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.csproj.CoreCompileInputs.cache
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.exe
+D:\4.Projects\WCF-SERVICE-FORM\WindowsForms1\obj\Debug\WindowsForms1.pdb

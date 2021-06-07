@@ -1,28 +1,543 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCF_Service.Entity" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/SVService.App_Data" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/SVService.Entity" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService_DangNhapTK_InputMessage">
-    <wsdl:part name="parameters" element="tns:DangNhapTK" />
+  <wsdl:message name="IServiceWCF_InsertBH_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBH" />
   </wsdl:message>
-  <wsdl:message name="IService_DangNhapTK_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DangNhapTKResponse" />
+  <wsdl:message name="IServiceWCF_InsertBH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBHResponse" />
   </wsdl:message>
-  <wsdl:portType name="IService">
-    <wsdl:operation name="DangNhapTK">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/DangNhapTK" message="tns:IService_DangNhapTK_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/DangNhapTKResponse" message="tns:IService_DangNhapTK_OutputMessage" />
+  <wsdl:message name="IServiceWCF_UpdateBH_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateBH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteBH_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteBH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllBH_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllBH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertKH_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertKH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertKH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateKH_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateKH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateKH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteKH_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteKH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteKH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllKH_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllKH" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllKH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertNCC_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNCC" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertNCC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateNCC_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNCC" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateNCC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteNCC_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNCC" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteNCC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllNCC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNCC" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllNCC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertNV_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNV" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertNV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateNV_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNV" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateNV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteNV_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNV" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteNV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllNV_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNV" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllNV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertNSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertNSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateNSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateNSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteNSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteNSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllNSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllNSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertTK_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTK" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_InsertTK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateTK_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTK" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_UpdateTK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteTK_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTK" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DeleteTK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllTK_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTK" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_GetAllTK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTKResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceWCF">
+    <wsdl:operation name="InsertBH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/InsertBH" message="tns:IServiceWCF_InsertBH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/InsertBHResponse" message="tns:IServiceWCF_InsertBH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/UpdateBH" message="tns:IServiceWCF_UpdateBH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/UpdateBHResponse" message="tns:IServiceWCF_UpdateBH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DeleteBH" message="tns:IServiceWCF_DeleteBH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DeleteBHResponse" message="tns:IServiceWCF_DeleteBH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/GetAllBH" message="tns:IServiceWCF_GetAllBH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/GetAllBHResponse" message="tns:IServiceWCF_GetAllBH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertKH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/InsertKH" message="tns:IServiceWCF_InsertKH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/InsertKHResponse" message="tns:IServiceWCF_InsertKH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/UpdateKH" message="tns:IServiceWCF_UpdateKH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/UpdateKHResponse" message="tns:IServiceWCF_UpdateKH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DeleteKH" message="tns:IServiceWCF_DeleteKH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DeleteKHResponse" message="tns:IServiceWCF_DeleteKH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllKH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/GetAllKH" message="tns:IServiceWCF_GetAllKH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/GetAllKHResponse" message="tns:IServiceWCF_GetAllKH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNCC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/InsertNCC" message="tns:IServiceWCF_InsertNCC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/InsertNCCResponse" message="tns:IServiceWCF_InsertNCC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNCC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/UpdateNCC" message="tns:IServiceWCF_UpdateNCC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/UpdateNCCResponse" message="tns:IServiceWCF_UpdateNCC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNCC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DeleteNCC" message="tns:IServiceWCF_DeleteNCC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DeleteNCCResponse" message="tns:IServiceWCF_DeleteNCC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNCC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/GetAllNCC" message="tns:IServiceWCF_GetAllNCC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/GetAllNCCResponse" message="tns:IServiceWCF_GetAllNCC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/InsertNV" message="tns:IServiceWCF_InsertNV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/InsertNVResponse" message="tns:IServiceWCF_InsertNV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/UpdateNV" message="tns:IServiceWCF_UpdateNV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/UpdateNVResponse" message="tns:IServiceWCF_UpdateNV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DeleteNV" message="tns:IServiceWCF_DeleteNV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DeleteNVResponse" message="tns:IServiceWCF_DeleteNV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/GetAllNV" message="tns:IServiceWCF_GetAllNV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/GetAllNVResponse" message="tns:IServiceWCF_GetAllNV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/InsertNSP" message="tns:IServiceWCF_InsertNSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/InsertNSPResponse" message="tns:IServiceWCF_InsertNSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/UpdateNSP" message="tns:IServiceWCF_UpdateNSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/UpdateNSPResponse" message="tns:IServiceWCF_UpdateNSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DeleteNSP" message="tns:IServiceWCF_DeleteNSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DeleteNSPResponse" message="tns:IServiceWCF_DeleteNSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/GetAllNSP" message="tns:IServiceWCF_GetAllNSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/GetAllNSPResponse" message="tns:IServiceWCF_GetAllNSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/InsertSP" message="tns:IServiceWCF_InsertSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/InsertSPResponse" message="tns:IServiceWCF_InsertSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/UpdateSP" message="tns:IServiceWCF_UpdateSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/UpdateSPResponse" message="tns:IServiceWCF_UpdateSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DeleteSP" message="tns:IServiceWCF_DeleteSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DeleteSPResponse" message="tns:IServiceWCF_DeleteSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/GetAllSP" message="tns:IServiceWCF_GetAllSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/GetAllSPResponse" message="tns:IServiceWCF_GetAllSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/InsertTK" message="tns:IServiceWCF_InsertTK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/InsertTKResponse" message="tns:IServiceWCF_InsertTK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/UpdateTK" message="tns:IServiceWCF_UpdateTK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/UpdateTKResponse" message="tns:IServiceWCF_UpdateTK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DeleteTK" message="tns:IServiceWCF_DeleteTK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DeleteTKResponse" message="tns:IServiceWCF_DeleteTK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/GetAllTK" message="tns:IServiceWCF_GetAllTK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/GetAllTKResponse" message="tns:IServiceWCF_GetAllTK_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+  <wsdl:binding name="BasicHttpBinding_IServiceWCF" type="tns:IServiceWCF">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DangNhapTK">
-      <soap:operation soapAction="http://tempuri.org/IService/DangNhapTK" style="document" />
+    <wsdl:operation name="InsertBH">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/InsertBH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBH">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/UpdateBH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBH">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DeleteBH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBH">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/GetAllBH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertKH">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/InsertKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKH">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/UpdateKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteKH">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DeleteKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllKH">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/GetAllKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNCC">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/InsertNCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNCC">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/UpdateNCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNCC">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DeleteNCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNCC">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/GetAllNCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNV">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/InsertNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNV">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/UpdateNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNV">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DeleteNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNV">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/GetAllNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/InsertNSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/UpdateNSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DeleteNSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/GetAllNSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/InsertSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/UpdateSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DeleteSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/GetAllSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTK">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/InsertTK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTK">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/UpdateTK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTK">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DeleteTK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTK">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/GetAllTK" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -31,9 +546,9 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="Service">
-    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
-      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfService/Service/" />
+  <wsdl:service name="ServiceWCF">
+    <wsdl:port name="BasicHttpBinding_IServiceWCF" binding="tns:BasicHttpBinding_IServiceWCF">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF_Service/ServiceWCF/" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

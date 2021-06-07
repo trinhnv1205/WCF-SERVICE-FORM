@@ -15,12 +15,457 @@ namespace WindowsForms.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TaiKhoan", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityBase", Namespace="http://schemas.datacontract.org/2004/07/SVService.App_Data")]
     [System.SerializableAttribute()]
-    public partial class TaiKhoan : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WindowsForms.ServiceReference1.KhachHang))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WindowsForms.ServiceReference1.NhaCungCap))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WindowsForms.ServiceReference1.NhapSanPham))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WindowsForms.ServiceReference1.SanPham))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WindowsForms.ServiceReference1.TaiKhoan))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WindowsForms.ServiceReference1.NhanVien))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WindowsForms.ServiceReference1.BanHang))]
+    public partial class EntityBase : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="KhachHang", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service.Entity")]
+    [System.SerializableAttribute()]
+    public partial class KhachHang : WindowsForms.ServiceReference1.EntityBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DiachiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaKHField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SdtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenKHField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Diachi {
+            get {
+                return this.DiachiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DiachiField, value) != true)) {
+                    this.DiachiField = value;
+                    this.RaisePropertyChanged("Diachi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaKH {
+            get {
+                return this.MaKHField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaKHField, value) != true)) {
+                    this.MaKHField = value;
+                    this.RaisePropertyChanged("MaKH");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sdt {
+            get {
+                return this.SdtField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SdtField, value) != true)) {
+                    this.SdtField = value;
+                    this.RaisePropertyChanged("Sdt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenKH {
+            get {
+                return this.TenKHField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenKHField, value) != true)) {
+                    this.TenKHField = value;
+                    this.RaisePropertyChanged("TenKH");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NhaCungCap", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service.Entity")]
+    [System.SerializableAttribute()]
+    public partial class NhaCungCap : WindowsForms.ServiceReference1.EntityBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DiachiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaNCCField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SdtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenNCCField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Diachi {
+            get {
+                return this.DiachiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DiachiField, value) != true)) {
+                    this.DiachiField = value;
+                    this.RaisePropertyChanged("Diachi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaNCC {
+            get {
+                return this.MaNCCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaNCCField, value) != true)) {
+                    this.MaNCCField = value;
+                    this.RaisePropertyChanged("MaNCC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sdt {
+            get {
+                return this.SdtField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SdtField, value) != true)) {
+                    this.SdtField = value;
+                    this.RaisePropertyChanged("Sdt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenNCC {
+            get {
+                return this.TenNCCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenNCCField, value) != true)) {
+                    this.TenNCCField = value;
+                    this.RaisePropertyChanged("TenNCC");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NhapSanPham", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service.Entity")]
+    [System.SerializableAttribute()]
+    public partial class NhapSanPham : WindowsForms.ServiceReference1.EntityBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GhichuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GianhapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaNCCField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaPhieuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaSPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NgaynhapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SoluongField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenSPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ThanhtienField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ghichu {
+            get {
+                return this.GhichuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GhichuField, value) != true)) {
+                    this.GhichuField = value;
+                    this.RaisePropertyChanged("Ghichu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Gianhap {
+            get {
+                return this.GianhapField;
+            }
+            set {
+                if ((this.GianhapField.Equals(value) != true)) {
+                    this.GianhapField = value;
+                    this.RaisePropertyChanged("Gianhap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaNCC {
+            get {
+                return this.MaNCCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaNCCField, value) != true)) {
+                    this.MaNCCField = value;
+                    this.RaisePropertyChanged("MaNCC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaPhieu {
+            get {
+                return this.MaPhieuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaPhieuField, value) != true)) {
+                    this.MaPhieuField = value;
+                    this.RaisePropertyChanged("MaPhieu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaSP {
+            get {
+                return this.MaSPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaSPField, value) != true)) {
+                    this.MaSPField = value;
+                    this.RaisePropertyChanged("MaSP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ngaynhap {
+            get {
+                return this.NgaynhapField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NgaynhapField, value) != true)) {
+                    this.NgaynhapField = value;
+                    this.RaisePropertyChanged("Ngaynhap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Soluong {
+            get {
+                return this.SoluongField;
+            }
+            set {
+                if ((this.SoluongField.Equals(value) != true)) {
+                    this.SoluongField = value;
+                    this.RaisePropertyChanged("Soluong");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenSP {
+            get {
+                return this.TenSPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenSPField, value) != true)) {
+                    this.TenSPField = value;
+                    this.RaisePropertyChanged("TenSP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Thanhtien {
+            get {
+                return this.ThanhtienField;
+            }
+            set {
+                if ((this.ThanhtienField.Equals(value) != true)) {
+                    this.ThanhtienField = value;
+                    this.RaisePropertyChanged("Thanhtien");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SanPham", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service.Entity")]
+    [System.SerializableAttribute()]
+    public partial class SanPham : WindowsForms.ServiceReference1.EntityBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GhichuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaNCCField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaSPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SoluongField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenSPField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ghichu {
+            get {
+                return this.GhichuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GhichuField, value) != true)) {
+                    this.GhichuField = value;
+                    this.RaisePropertyChanged("Ghichu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Gia {
+            get {
+                return this.GiaField;
+            }
+            set {
+                if ((this.GiaField.Equals(value) != true)) {
+                    this.GiaField = value;
+                    this.RaisePropertyChanged("Gia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaNCC {
+            get {
+                return this.MaNCCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaNCCField, value) != true)) {
+                    this.MaNCCField = value;
+                    this.RaisePropertyChanged("MaNCC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaSP {
+            get {
+                return this.MaSPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaSPField, value) != true)) {
+                    this.MaSPField = value;
+                    this.RaisePropertyChanged("MaSP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Soluong {
+            get {
+                return this.SoluongField;
+            }
+            set {
+                if ((this.SoluongField.Equals(value) != true)) {
+                    this.SoluongField = value;
+                    this.RaisePropertyChanged("Soluong");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenSP {
+            get {
+                return this.TenSPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenSPField, value) != true)) {
+                    this.TenSPField = value;
+                    this.RaisePropertyChanged("TenSP");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TaiKhoan", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service.Entity")]
+    [System.SerializableAttribute()]
+    public partial class TaiKhoan : WindowsForms.ServiceReference1.EntityBase {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CVField;
@@ -33,16 +478,6 @@ namespace WindowsForms.ServiceReference1 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TenTKField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string CV {
@@ -95,61 +530,780 @@ namespace WindowsForms.ServiceReference1 {
                 }
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NhanVien", Namespace="http://schemas.datacontract.org/2004/07/SVService.Entity")]
+    [System.SerializableAttribute()]
+    public partial class NhanVien : WindowsForms.ServiceReference1.EntityBase {
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChucvuField;
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DiachiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HotenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LuongField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LuongcbField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaNVField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NgaysinhField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PhucapField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SdtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int thuongField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chucvu {
+            get {
+                return this.ChucvuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChucvuField, value) != true)) {
+                    this.ChucvuField = value;
+                    this.RaisePropertyChanged("Chucvu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Diachi {
+            get {
+                return this.DiachiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DiachiField, value) != true)) {
+                    this.DiachiField = value;
+                    this.RaisePropertyChanged("Diachi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Hoten {
+            get {
+                return this.HotenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HotenField, value) != true)) {
+                    this.HotenField = value;
+                    this.RaisePropertyChanged("Hoten");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Luong {
+            get {
+                return this.LuongField;
+            }
+            set {
+                if ((this.LuongField.Equals(value) != true)) {
+                    this.LuongField = value;
+                    this.RaisePropertyChanged("Luong");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Luongcb {
+            get {
+                return this.LuongcbField;
+            }
+            set {
+                if ((this.LuongcbField.Equals(value) != true)) {
+                    this.LuongcbField = value;
+                    this.RaisePropertyChanged("Luongcb");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaNV {
+            get {
+                return this.MaNVField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaNVField, value) != true)) {
+                    this.MaNVField = value;
+                    this.RaisePropertyChanged("MaNV");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ngaysinh {
+            get {
+                return this.NgaysinhField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NgaysinhField, value) != true)) {
+                    this.NgaysinhField = value;
+                    this.RaisePropertyChanged("Ngaysinh");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Phucap {
+            get {
+                return this.PhucapField;
+            }
+            set {
+                if ((this.PhucapField.Equals(value) != true)) {
+                    this.PhucapField = value;
+                    this.RaisePropertyChanged("Phucap");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sdt {
+            get {
+                return this.SdtField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SdtField, value) != true)) {
+                    this.SdtField = value;
+                    this.RaisePropertyChanged("Sdt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int thuong {
+            get {
+                return this.thuongField;
+            }
+            set {
+                if ((this.thuongField.Equals(value) != true)) {
+                    this.thuongField = value;
+                    this.RaisePropertyChanged("thuong");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BanHang", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service.Entity")]
+    [System.SerializableAttribute()]
+    public partial class BanHang : WindowsForms.ServiceReference1.EntityBase {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GhichuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaHDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaKHField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaNCCField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaSPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NgaybanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SoluongField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenSPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ThanhtienField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ghichu {
+            get {
+                return this.GhichuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GhichuField, value) != true)) {
+                    this.GhichuField = value;
+                    this.RaisePropertyChanged("Ghichu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Gia {
+            get {
+                return this.GiaField;
+            }
+            set {
+                if ((this.GiaField.Equals(value) != true)) {
+                    this.GiaField = value;
+                    this.RaisePropertyChanged("Gia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaHD {
+            get {
+                return this.MaHDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaHDField, value) != true)) {
+                    this.MaHDField = value;
+                    this.RaisePropertyChanged("MaHD");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaKH {
+            get {
+                return this.MaKHField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaKHField, value) != true)) {
+                    this.MaKHField = value;
+                    this.RaisePropertyChanged("MaKH");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaNCC {
+            get {
+                return this.MaNCCField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaNCCField, value) != true)) {
+                    this.MaNCCField = value;
+                    this.RaisePropertyChanged("MaNCC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaSP {
+            get {
+                return this.MaSPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaSPField, value) != true)) {
+                    this.MaSPField = value;
+                    this.RaisePropertyChanged("MaSP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ngayban {
+            get {
+                return this.NgaybanField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NgaybanField, value) != true)) {
+                    this.NgaybanField = value;
+                    this.RaisePropertyChanged("Ngayban");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Soluong {
+            get {
+                return this.SoluongField;
+            }
+            set {
+                if ((this.SoluongField.Equals(value) != true)) {
+                    this.SoluongField = value;
+                    this.RaisePropertyChanged("Soluong");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TenSP {
+            get {
+                return this.TenSPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenSPField, value) != true)) {
+                    this.TenSPField = value;
+                    this.RaisePropertyChanged("TenSP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Thanhtien {
+            get {
+                return this.ThanhtienField;
+            }
+            set {
+                if ((this.ThanhtienField.Equals(value) != true)) {
+                    this.ThanhtienField = value;
+                    this.RaisePropertyChanged("Thanhtien");
+                }
             }
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService")]
-    public interface IService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IServiceWCF")]
+    public interface IServiceWCF {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DangNhapTK", ReplyAction="http://tempuri.org/IService/DangNhapTKResponse")]
-        int DangNhapTK(WindowsForms.ServiceReference1.TaiKhoan tk);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertBH", ReplyAction="http://tempuri.org/IServiceWCF/InsertBHResponse")]
+        void InsertBH(WindowsForms.ServiceReference1.BanHang bh);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DangNhapTK", ReplyAction="http://tempuri.org/IService/DangNhapTKResponse")]
-        System.Threading.Tasks.Task<int> DangNhapTKAsync(WindowsForms.ServiceReference1.TaiKhoan tk);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertBH", ReplyAction="http://tempuri.org/IServiceWCF/InsertBHResponse")]
+        System.Threading.Tasks.Task InsertBHAsync(WindowsForms.ServiceReference1.BanHang bh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateBH", ReplyAction="http://tempuri.org/IServiceWCF/UpdateBHResponse")]
+        void UpdateBH(WindowsForms.ServiceReference1.BanHang bh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateBH", ReplyAction="http://tempuri.org/IServiceWCF/UpdateBHResponse")]
+        System.Threading.Tasks.Task UpdateBHAsync(WindowsForms.ServiceReference1.BanHang bh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteBH", ReplyAction="http://tempuri.org/IServiceWCF/DeleteBHResponse")]
+        void DeleteBH(WindowsForms.ServiceReference1.BanHang bh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteBH", ReplyAction="http://tempuri.org/IServiceWCF/DeleteBHResponse")]
+        System.Threading.Tasks.Task DeleteBHAsync(WindowsForms.ServiceReference1.BanHang bh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllBH", ReplyAction="http://tempuri.org/IServiceWCF/GetAllBHResponse")]
+        WindowsForms.ServiceReference1.BanHang[] GetAllBH();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllBH", ReplyAction="http://tempuri.org/IServiceWCF/GetAllBHResponse")]
+        System.Threading.Tasks.Task<WindowsForms.ServiceReference1.BanHang[]> GetAllBHAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertKH", ReplyAction="http://tempuri.org/IServiceWCF/InsertKHResponse")]
+        void InsertKH(WindowsForms.ServiceReference1.KhachHang kh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertKH", ReplyAction="http://tempuri.org/IServiceWCF/InsertKHResponse")]
+        System.Threading.Tasks.Task InsertKHAsync(WindowsForms.ServiceReference1.KhachHang kh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateKH", ReplyAction="http://tempuri.org/IServiceWCF/UpdateKHResponse")]
+        void UpdateKH(WindowsForms.ServiceReference1.KhachHang kh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateKH", ReplyAction="http://tempuri.org/IServiceWCF/UpdateKHResponse")]
+        System.Threading.Tasks.Task UpdateKHAsync(WindowsForms.ServiceReference1.KhachHang kh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteKH", ReplyAction="http://tempuri.org/IServiceWCF/DeleteKHResponse")]
+        void DeleteKH(WindowsForms.ServiceReference1.KhachHang kh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteKH", ReplyAction="http://tempuri.org/IServiceWCF/DeleteKHResponse")]
+        System.Threading.Tasks.Task DeleteKHAsync(WindowsForms.ServiceReference1.KhachHang kh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllKH", ReplyAction="http://tempuri.org/IServiceWCF/GetAllKHResponse")]
+        WindowsForms.ServiceReference1.KhachHang[] GetAllKH();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllKH", ReplyAction="http://tempuri.org/IServiceWCF/GetAllKHResponse")]
+        System.Threading.Tasks.Task<WindowsForms.ServiceReference1.KhachHang[]> GetAllKHAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertNCC", ReplyAction="http://tempuri.org/IServiceWCF/InsertNCCResponse")]
+        void InsertNCC(WindowsForms.ServiceReference1.NhaCungCap ncc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertNCC", ReplyAction="http://tempuri.org/IServiceWCF/InsertNCCResponse")]
+        System.Threading.Tasks.Task InsertNCCAsync(WindowsForms.ServiceReference1.NhaCungCap ncc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateNCC", ReplyAction="http://tempuri.org/IServiceWCF/UpdateNCCResponse")]
+        void UpdateNCC(WindowsForms.ServiceReference1.NhaCungCap ncc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateNCC", ReplyAction="http://tempuri.org/IServiceWCF/UpdateNCCResponse")]
+        System.Threading.Tasks.Task UpdateNCCAsync(WindowsForms.ServiceReference1.NhaCungCap ncc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteNCC", ReplyAction="http://tempuri.org/IServiceWCF/DeleteNCCResponse")]
+        void DeleteNCC(WindowsForms.ServiceReference1.NhaCungCap ncc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteNCC", ReplyAction="http://tempuri.org/IServiceWCF/DeleteNCCResponse")]
+        System.Threading.Tasks.Task DeleteNCCAsync(WindowsForms.ServiceReference1.NhaCungCap ncc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllNCC", ReplyAction="http://tempuri.org/IServiceWCF/GetAllNCCResponse")]
+        WindowsForms.ServiceReference1.NhaCungCap[] GetAllNCC();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllNCC", ReplyAction="http://tempuri.org/IServiceWCF/GetAllNCCResponse")]
+        System.Threading.Tasks.Task<WindowsForms.ServiceReference1.NhaCungCap[]> GetAllNCCAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertNV", ReplyAction="http://tempuri.org/IServiceWCF/InsertNVResponse")]
+        void InsertNV(WindowsForms.ServiceReference1.NhanVien nv);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertNV", ReplyAction="http://tempuri.org/IServiceWCF/InsertNVResponse")]
+        System.Threading.Tasks.Task InsertNVAsync(WindowsForms.ServiceReference1.NhanVien nv);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateNV", ReplyAction="http://tempuri.org/IServiceWCF/UpdateNVResponse")]
+        void UpdateNV(WindowsForms.ServiceReference1.NhanVien nv);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateNV", ReplyAction="http://tempuri.org/IServiceWCF/UpdateNVResponse")]
+        System.Threading.Tasks.Task UpdateNVAsync(WindowsForms.ServiceReference1.NhanVien nv);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteNV", ReplyAction="http://tempuri.org/IServiceWCF/DeleteNVResponse")]
+        void DeleteNV(WindowsForms.ServiceReference1.NhanVien nv);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteNV", ReplyAction="http://tempuri.org/IServiceWCF/DeleteNVResponse")]
+        System.Threading.Tasks.Task DeleteNVAsync(WindowsForms.ServiceReference1.NhanVien nv);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllNV", ReplyAction="http://tempuri.org/IServiceWCF/GetAllNVResponse")]
+        WindowsForms.ServiceReference1.NhanVien[] GetAllNV();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllNV", ReplyAction="http://tempuri.org/IServiceWCF/GetAllNVResponse")]
+        System.Threading.Tasks.Task<WindowsForms.ServiceReference1.NhanVien[]> GetAllNVAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertNSP", ReplyAction="http://tempuri.org/IServiceWCF/InsertNSPResponse")]
+        void InsertNSP(WindowsForms.ServiceReference1.NhapSanPham nsp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertNSP", ReplyAction="http://tempuri.org/IServiceWCF/InsertNSPResponse")]
+        System.Threading.Tasks.Task InsertNSPAsync(WindowsForms.ServiceReference1.NhapSanPham nsp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateNSP", ReplyAction="http://tempuri.org/IServiceWCF/UpdateNSPResponse")]
+        void UpdateNSP(WindowsForms.ServiceReference1.NhapSanPham nsp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateNSP", ReplyAction="http://tempuri.org/IServiceWCF/UpdateNSPResponse")]
+        System.Threading.Tasks.Task UpdateNSPAsync(WindowsForms.ServiceReference1.NhapSanPham nsp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteNSP", ReplyAction="http://tempuri.org/IServiceWCF/DeleteNSPResponse")]
+        void DeleteNSP(WindowsForms.ServiceReference1.NhapSanPham nsp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteNSP", ReplyAction="http://tempuri.org/IServiceWCF/DeleteNSPResponse")]
+        System.Threading.Tasks.Task DeleteNSPAsync(WindowsForms.ServiceReference1.NhapSanPham nsp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllNSP", ReplyAction="http://tempuri.org/IServiceWCF/GetAllNSPResponse")]
+        WindowsForms.ServiceReference1.NhapSanPham[] GetAllNSP();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllNSP", ReplyAction="http://tempuri.org/IServiceWCF/GetAllNSPResponse")]
+        System.Threading.Tasks.Task<WindowsForms.ServiceReference1.NhapSanPham[]> GetAllNSPAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertSP", ReplyAction="http://tempuri.org/IServiceWCF/InsertSPResponse")]
+        void InsertSP(WindowsForms.ServiceReference1.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertSP", ReplyAction="http://tempuri.org/IServiceWCF/InsertSPResponse")]
+        System.Threading.Tasks.Task InsertSPAsync(WindowsForms.ServiceReference1.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateSP", ReplyAction="http://tempuri.org/IServiceWCF/UpdateSPResponse")]
+        void UpdateSP(WindowsForms.ServiceReference1.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateSP", ReplyAction="http://tempuri.org/IServiceWCF/UpdateSPResponse")]
+        System.Threading.Tasks.Task UpdateSPAsync(WindowsForms.ServiceReference1.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteSP", ReplyAction="http://tempuri.org/IServiceWCF/DeleteSPResponse")]
+        void DeleteSP(WindowsForms.ServiceReference1.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteSP", ReplyAction="http://tempuri.org/IServiceWCF/DeleteSPResponse")]
+        System.Threading.Tasks.Task DeleteSPAsync(WindowsForms.ServiceReference1.SanPham sp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllSP", ReplyAction="http://tempuri.org/IServiceWCF/GetAllSPResponse")]
+        WindowsForms.ServiceReference1.SanPham[] GetAllSP();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllSP", ReplyAction="http://tempuri.org/IServiceWCF/GetAllSPResponse")]
+        System.Threading.Tasks.Task<WindowsForms.ServiceReference1.SanPham[]> GetAllSPAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertTK", ReplyAction="http://tempuri.org/IServiceWCF/InsertTKResponse")]
+        void InsertTK(WindowsForms.ServiceReference1.TaiKhoan tk);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/InsertTK", ReplyAction="http://tempuri.org/IServiceWCF/InsertTKResponse")]
+        System.Threading.Tasks.Task InsertTKAsync(WindowsForms.ServiceReference1.TaiKhoan tk);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateTK", ReplyAction="http://tempuri.org/IServiceWCF/UpdateTKResponse")]
+        void UpdateTK(WindowsForms.ServiceReference1.TaiKhoan tk);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/UpdateTK", ReplyAction="http://tempuri.org/IServiceWCF/UpdateTKResponse")]
+        System.Threading.Tasks.Task UpdateTKAsync(WindowsForms.ServiceReference1.TaiKhoan tk);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteTK", ReplyAction="http://tempuri.org/IServiceWCF/DeleteTKResponse")]
+        void DeleteTK(WindowsForms.ServiceReference1.TaiKhoan tk);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/DeleteTK", ReplyAction="http://tempuri.org/IServiceWCF/DeleteTKResponse")]
+        System.Threading.Tasks.Task DeleteTKAsync(WindowsForms.ServiceReference1.TaiKhoan tk);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllTK", ReplyAction="http://tempuri.org/IServiceWCF/GetAllTKResponse")]
+        WindowsForms.ServiceReference1.TaiKhoan[] GetAllTK();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceWCF/GetAllTK", ReplyAction="http://tempuri.org/IServiceWCF/GetAllTKResponse")]
+        System.Threading.Tasks.Task<WindowsForms.ServiceReference1.TaiKhoan[]> GetAllTKAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceChannel : WindowsForms.ServiceReference1.IService, System.ServiceModel.IClientChannel {
+    public interface IServiceWCFChannel : WindowsForms.ServiceReference1.IServiceWCF, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceClient : System.ServiceModel.ClientBase<WindowsForms.ServiceReference1.IService>, WindowsForms.ServiceReference1.IService {
+    public partial class ServiceWCFClient : System.ServiceModel.ClientBase<WindowsForms.ServiceReference1.IServiceWCF>, WindowsForms.ServiceReference1.IServiceWCF {
         
-        public ServiceClient() {
+        public ServiceWCFClient() {
         }
         
-        public ServiceClient(string endpointConfigurationName) : 
+        public ServiceWCFClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public ServiceWCFClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceWCFClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceWCFClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public int DangNhapTK(WindowsForms.ServiceReference1.TaiKhoan tk) {
-            return base.Channel.DangNhapTK(tk);
+        public void InsertBH(WindowsForms.ServiceReference1.BanHang bh) {
+            base.Channel.InsertBH(bh);
         }
         
-        public System.Threading.Tasks.Task<int> DangNhapTKAsync(WindowsForms.ServiceReference1.TaiKhoan tk) {
-            return base.Channel.DangNhapTKAsync(tk);
+        public System.Threading.Tasks.Task InsertBHAsync(WindowsForms.ServiceReference1.BanHang bh) {
+            return base.Channel.InsertBHAsync(bh);
+        }
+        
+        public void UpdateBH(WindowsForms.ServiceReference1.BanHang bh) {
+            base.Channel.UpdateBH(bh);
+        }
+        
+        public System.Threading.Tasks.Task UpdateBHAsync(WindowsForms.ServiceReference1.BanHang bh) {
+            return base.Channel.UpdateBHAsync(bh);
+        }
+        
+        public void DeleteBH(WindowsForms.ServiceReference1.BanHang bh) {
+            base.Channel.DeleteBH(bh);
+        }
+        
+        public System.Threading.Tasks.Task DeleteBHAsync(WindowsForms.ServiceReference1.BanHang bh) {
+            return base.Channel.DeleteBHAsync(bh);
+        }
+        
+        public WindowsForms.ServiceReference1.BanHang[] GetAllBH() {
+            return base.Channel.GetAllBH();
+        }
+        
+        public System.Threading.Tasks.Task<WindowsForms.ServiceReference1.BanHang[]> GetAllBHAsync() {
+            return base.Channel.GetAllBHAsync();
+        }
+        
+        public void InsertKH(WindowsForms.ServiceReference1.KhachHang kh) {
+            base.Channel.InsertKH(kh);
+        }
+        
+        public System.Threading.Tasks.Task InsertKHAsync(WindowsForms.ServiceReference1.KhachHang kh) {
+            return base.Channel.InsertKHAsync(kh);
+        }
+        
+        public void UpdateKH(WindowsForms.ServiceReference1.KhachHang kh) {
+            base.Channel.UpdateKH(kh);
+        }
+        
+        public System.Threading.Tasks.Task UpdateKHAsync(WindowsForms.ServiceReference1.KhachHang kh) {
+            return base.Channel.UpdateKHAsync(kh);
+        }
+        
+        public void DeleteKH(WindowsForms.ServiceReference1.KhachHang kh) {
+            base.Channel.DeleteKH(kh);
+        }
+        
+        public System.Threading.Tasks.Task DeleteKHAsync(WindowsForms.ServiceReference1.KhachHang kh) {
+            return base.Channel.DeleteKHAsync(kh);
+        }
+        
+        public WindowsForms.ServiceReference1.KhachHang[] GetAllKH() {
+            return base.Channel.GetAllKH();
+        }
+        
+        public System.Threading.Tasks.Task<WindowsForms.ServiceReference1.KhachHang[]> GetAllKHAsync() {
+            return base.Channel.GetAllKHAsync();
+        }
+        
+        public void InsertNCC(WindowsForms.ServiceReference1.NhaCungCap ncc) {
+            base.Channel.InsertNCC(ncc);
+        }
+        
+        public System.Threading.Tasks.Task InsertNCCAsync(WindowsForms.ServiceReference1.NhaCungCap ncc) {
+            return base.Channel.InsertNCCAsync(ncc);
+        }
+        
+        public void UpdateNCC(WindowsForms.ServiceReference1.NhaCungCap ncc) {
+            base.Channel.UpdateNCC(ncc);
+        }
+        
+        public System.Threading.Tasks.Task UpdateNCCAsync(WindowsForms.ServiceReference1.NhaCungCap ncc) {
+            return base.Channel.UpdateNCCAsync(ncc);
+        }
+        
+        public void DeleteNCC(WindowsForms.ServiceReference1.NhaCungCap ncc) {
+            base.Channel.DeleteNCC(ncc);
+        }
+        
+        public System.Threading.Tasks.Task DeleteNCCAsync(WindowsForms.ServiceReference1.NhaCungCap ncc) {
+            return base.Channel.DeleteNCCAsync(ncc);
+        }
+        
+        public WindowsForms.ServiceReference1.NhaCungCap[] GetAllNCC() {
+            return base.Channel.GetAllNCC();
+        }
+        
+        public System.Threading.Tasks.Task<WindowsForms.ServiceReference1.NhaCungCap[]> GetAllNCCAsync() {
+            return base.Channel.GetAllNCCAsync();
+        }
+        
+        public void InsertNV(WindowsForms.ServiceReference1.NhanVien nv) {
+            base.Channel.InsertNV(nv);
+        }
+        
+        public System.Threading.Tasks.Task InsertNVAsync(WindowsForms.ServiceReference1.NhanVien nv) {
+            return base.Channel.InsertNVAsync(nv);
+        }
+        
+        public void UpdateNV(WindowsForms.ServiceReference1.NhanVien nv) {
+            base.Channel.UpdateNV(nv);
+        }
+        
+        public System.Threading.Tasks.Task UpdateNVAsync(WindowsForms.ServiceReference1.NhanVien nv) {
+            return base.Channel.UpdateNVAsync(nv);
+        }
+        
+        public void DeleteNV(WindowsForms.ServiceReference1.NhanVien nv) {
+            base.Channel.DeleteNV(nv);
+        }
+        
+        public System.Threading.Tasks.Task DeleteNVAsync(WindowsForms.ServiceReference1.NhanVien nv) {
+            return base.Channel.DeleteNVAsync(nv);
+        }
+        
+        public WindowsForms.ServiceReference1.NhanVien[] GetAllNV() {
+            return base.Channel.GetAllNV();
+        }
+        
+        public System.Threading.Tasks.Task<WindowsForms.ServiceReference1.NhanVien[]> GetAllNVAsync() {
+            return base.Channel.GetAllNVAsync();
+        }
+        
+        public void InsertNSP(WindowsForms.ServiceReference1.NhapSanPham nsp) {
+            base.Channel.InsertNSP(nsp);
+        }
+        
+        public System.Threading.Tasks.Task InsertNSPAsync(WindowsForms.ServiceReference1.NhapSanPham nsp) {
+            return base.Channel.InsertNSPAsync(nsp);
+        }
+        
+        public void UpdateNSP(WindowsForms.ServiceReference1.NhapSanPham nsp) {
+            base.Channel.UpdateNSP(nsp);
+        }
+        
+        public System.Threading.Tasks.Task UpdateNSPAsync(WindowsForms.ServiceReference1.NhapSanPham nsp) {
+            return base.Channel.UpdateNSPAsync(nsp);
+        }
+        
+        public void DeleteNSP(WindowsForms.ServiceReference1.NhapSanPham nsp) {
+            base.Channel.DeleteNSP(nsp);
+        }
+        
+        public System.Threading.Tasks.Task DeleteNSPAsync(WindowsForms.ServiceReference1.NhapSanPham nsp) {
+            return base.Channel.DeleteNSPAsync(nsp);
+        }
+        
+        public WindowsForms.ServiceReference1.NhapSanPham[] GetAllNSP() {
+            return base.Channel.GetAllNSP();
+        }
+        
+        public System.Threading.Tasks.Task<WindowsForms.ServiceReference1.NhapSanPham[]> GetAllNSPAsync() {
+            return base.Channel.GetAllNSPAsync();
+        }
+        
+        public void InsertSP(WindowsForms.ServiceReference1.SanPham sp) {
+            base.Channel.InsertSP(sp);
+        }
+        
+        public System.Threading.Tasks.Task InsertSPAsync(WindowsForms.ServiceReference1.SanPham sp) {
+            return base.Channel.InsertSPAsync(sp);
+        }
+        
+        public void UpdateSP(WindowsForms.ServiceReference1.SanPham sp) {
+            base.Channel.UpdateSP(sp);
+        }
+        
+        public System.Threading.Tasks.Task UpdateSPAsync(WindowsForms.ServiceReference1.SanPham sp) {
+            return base.Channel.UpdateSPAsync(sp);
+        }
+        
+        public void DeleteSP(WindowsForms.ServiceReference1.SanPham sp) {
+            base.Channel.DeleteSP(sp);
+        }
+        
+        public System.Threading.Tasks.Task DeleteSPAsync(WindowsForms.ServiceReference1.SanPham sp) {
+            return base.Channel.DeleteSPAsync(sp);
+        }
+        
+        public WindowsForms.ServiceReference1.SanPham[] GetAllSP() {
+            return base.Channel.GetAllSP();
+        }
+        
+        public System.Threading.Tasks.Task<WindowsForms.ServiceReference1.SanPham[]> GetAllSPAsync() {
+            return base.Channel.GetAllSPAsync();
+        }
+        
+        public void InsertTK(WindowsForms.ServiceReference1.TaiKhoan tk) {
+            base.Channel.InsertTK(tk);
+        }
+        
+        public System.Threading.Tasks.Task InsertTKAsync(WindowsForms.ServiceReference1.TaiKhoan tk) {
+            return base.Channel.InsertTKAsync(tk);
+        }
+        
+        public void UpdateTK(WindowsForms.ServiceReference1.TaiKhoan tk) {
+            base.Channel.UpdateTK(tk);
+        }
+        
+        public System.Threading.Tasks.Task UpdateTKAsync(WindowsForms.ServiceReference1.TaiKhoan tk) {
+            return base.Channel.UpdateTKAsync(tk);
+        }
+        
+        public void DeleteTK(WindowsForms.ServiceReference1.TaiKhoan tk) {
+            base.Channel.DeleteTK(tk);
+        }
+        
+        public System.Threading.Tasks.Task DeleteTKAsync(WindowsForms.ServiceReference1.TaiKhoan tk) {
+            return base.Channel.DeleteTKAsync(tk);
+        }
+        
+        public WindowsForms.ServiceReference1.TaiKhoan[] GetAllTK() {
+            return base.Channel.GetAllTK();
+        }
+        
+        public System.Threading.Tasks.Task<WindowsForms.ServiceReference1.TaiKhoan[]> GetAllTKAsync() {
+            return base.Channel.GetAllTKAsync();
         }
     }
 }

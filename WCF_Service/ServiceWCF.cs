@@ -133,7 +133,7 @@ namespace WCF_Service
 
         public List<SanPham> GetAllSP()
         {
-            return ConvertUtil.ConvertToList<SanPham>(dbAccess.Select("select * from SANPHAM"));
+            return ConvertUtil.ConvertToList<SanPham>(dbAccess.Select("select * from SP"));
         }
 
         public void InsertTK(TaiKhoan tk)

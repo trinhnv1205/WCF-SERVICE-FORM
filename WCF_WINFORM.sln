@@ -3,14 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_Form", "WCF_Form\WCF_Form.csproj", "{90B5DB05-69B5-4B0F-8E00-E1ABDA3D3D40}"
-	ProjectSection(ProjectDependencies) = postProject
-		{641C2159-A970-484C-BAF4-290D0522295C} = {641C2159-A970-484C-BAF4-290D0522295C}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_Service", "WCF_Service\WCF_Service.csproj", "{641C2159-A970-484C-BAF4-290D0522295C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{CDB39235-1E85-4291-A9CF-58C95B70F824}"
+	ProjectSection(ProjectDependencies) = postProject
+		{641C2159-A970-484C-BAF4-290D0522295C} = {641C2159-A970-484C-BAF4-290D0522295C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms1", "WindowsForms1\WindowsForms1.csproj", "{1145ACBF-21E8-43E0-A14B-0B29C4D12462}"
 EndProject
@@ -20,10 +18,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90B5DB05-69B5-4B0F-8E00-E1ABDA3D3D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90B5DB05-69B5-4B0F-8E00-E1ABDA3D3D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90B5DB05-69B5-4B0F-8E00-E1ABDA3D3D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90B5DB05-69B5-4B0F-8E00-E1ABDA3D3D40}.Release|Any CPU.Build.0 = Release|Any CPU
 		{641C2159-A970-484C-BAF4-290D0522295C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{641C2159-A970-484C-BAF4-290D0522295C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{641C2159-A970-484C-BAF4-290D0522295C}.Release|Any CPU.ActiveCfg = Release|Any CPU
